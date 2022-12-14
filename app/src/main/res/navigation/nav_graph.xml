@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.shoring_takeoff.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_northWallFragment"
+            app:destination="@id/northWallFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eastWallFragment"
+        android:name="com.example.shoring_takeoff.EastWallFragment"
+        android:label="fragment_east_wall"
+        tools:layout="@layout/fragment_east_wall" >
+        <action
+            android:id="@+id/action_eastWallFragment_to_southWallFragment"
+            app:destination="@id/southWallFragment" />
+        <action
+            android:id="@+id/action_eastWallFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/northWallFragment"
+        android:name="com.example.shoring_takeoff.NorthWallFragment"
+        android:label="fragment_north_wall"
+        tools:layout="@layout/fragment_north_wall" >
+        <action
+            android:id="@+id/action_northWallFragment_to_eastWallFragment"
+            app:destination="@id/eastWallFragment" />
+        <action
+            android:id="@+id/action_northWallFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/southWallFragment"
+        android:name="com.example.shoring_takeoff.SouthWallFragment"
+        android:label="fragment_south_wall"
+        tools:layout="@layout/fragment_south_wall" >
+        <action
+            android:id="@+id/action_southWallFragment_to_westWallFragment"
+            app:destination="@id/westWallFragment" />
+        <action
+            android:id="@+id/action_southWallFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/westWallFragment"
+        android:name="com.example.shoring_takeoff.WestWallFragment"
+        android:label="fragment_west_wall"
+        tools:layout="@layout/fragment_west_wall" >
+        <action
+            android:id="@+id/action_westWallFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_westWallFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.shoring_takeoff.SummaryFragment"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary" >
+        <action
+            android:id="@+id/action_summaryFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+</navigation>
